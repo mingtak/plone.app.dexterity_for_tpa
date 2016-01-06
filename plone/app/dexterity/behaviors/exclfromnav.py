@@ -30,7 +30,7 @@ class IExcludeFromNavigation(model.Schema):
             default=u'If selected, this item will not appear in the ' +
                     u'navigation tree'
         ),
-        default=False
+        default=True
     )
 
     directives.omitted('exclude_from_nav')
