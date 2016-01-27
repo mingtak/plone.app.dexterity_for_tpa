@@ -138,11 +138,12 @@ class EffectiveAfterExpires(Invalid):
 @provider(IFormFieldProvider)
 class IPublication(model.Schema):
     # dates fieldset
+    """
     model.fieldset(
         'dates',
         label=_PMF(u'label_schema_dates', default=u'Dates'),
         fields=['effective', 'expires'],
-    )
+    )"""
 
     effective = schema.Datetime(
         title=_PMF(u'label_effective_date', u'Publishing Date'),
@@ -154,6 +155,7 @@ class IPublication(model.Schema):
     )
     directives.widget('effective', DatetimeFieldWidget)
 
+    directives.mode(expires='hidden')
     expires = schema.Datetime(
         title=_PMF(u'label_expiration_date', u'Expiration Date'),
         description=_PMF(
