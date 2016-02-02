@@ -155,7 +155,7 @@ class IPublication(model.Schema):
     )
     directives.widget('effective', DatetimeFieldWidget)
 
-    directives.mode(expires='hidden')
+#    directives.mode(expires='hidden')
     expires = schema.Datetime(
         title=_PMF(u'label_expiration_date', u'Expiration Date'),
         description=_PMF(
